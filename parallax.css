@@ -4,6 +4,9 @@
     box-sizing: border-box;
     font-family: poppins;
 }
+@media screen and (max-width: 768px) {
+  /* Mobile styles here */
+}
 
 #wrapper{
     height: 100vh; /* height of the image viewport*/
