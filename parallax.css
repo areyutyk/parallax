@@ -1,0 +1,93 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: poppins;
+}
+
+#wrapper{
+    height: 100vh; /* height of the image viewport*/
+    overflow-x: hidden; /* x direction does not want to overflow */
+    overflow-y: auto;
+    perspective:10px; /* perpective is on just to implement 3D */
+}
+
+.container{
+    /* kyuki images ko absolute positioned karna hain */
+    position: relative;
+    /* adventure ko center main krna tha */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    /* 3d effect k0 preserved karo from parent */
+    transform-style: preserve-3d;
+    /* overlapping k liye aur text aage aayega */
+    z-index: -1;
+}
+.background{
+    transform: translateZ(-40px) scale(5);
+}
+.foreground{
+    transform: translateZ(-20px) scale(4);
+}
+.background , .foreground{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    /* image ko adventure text k piche dalne k liye */
+    z-index: -1;
+    /* stretch properly ratio maintained */
+    object-fit:cover;
+}
+h1{
+    position: absolute;
+    color: white;
+    top: 5rem;
+    font-size: 10rem;
+    letter-spacing: 4px;
+    font-family: poppins;
+}
+section{
+    background-color: rgb(45,45,45);
+    color: white;
+    padding: 5rem 0;
+}
+.sechead{
+    font-size: 5rem;
+    padding: 0 10rem;
+}
+.text{
+    font-size: 1.5rem;
+    padding: 0 10rem;
+    margin: 5rem 0;
+}
+.description{
+    position: absolute;
+    background-color: white;
+    font-size: 3.5rem;
+    font-weight: 600;
+    color: black;
+    padding:0.5rem 2.5rem;
+    top:50%;
+    left: 50%;
+}
+.bg{
+    position:relative;
+    width: 100%;
+    /* image will not move and rest things will move*/
+    background-attachment: fixed;
+    /* object fit jaisa */
+    background-size: cover;
+    background-position: center;
+    height: 600px;
+}
+.bg1{
+    background-image: url(sport-1.jpg);
+}
+.bg2{
+    background-image: url(sport-2.jpg);
+}
+.bg3{
+    background-image: url(sport-3.jpg);
+}
